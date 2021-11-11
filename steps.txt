@@ -1,0 +1,27 @@
+0- get a website form 
+    colorlib.com
+
+1- virtual enironment
+https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+for windows :
+Installing virtualenv
+py -m pip install --user virtualenv
+Creating a virtual environment
+py -m venv env
+Activating a virtual environment
+.\env\Scripts\activate
+get libs in env
+pip freeze
+pip freeze > requires.txt
+
+2- install django
+pip install django
+
+3-start project
+django-admin startproject project
+
+4- test server
+python manage.py runserver
+
+5- create your apps
+python manage.py startapp app1
