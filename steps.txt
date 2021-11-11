@@ -25,3 +25,32 @@ python manage.py runserver
 
 5- create your apps
 python manage.py startapp app1
+
+6- add apps to project/settings.py
+
+7-
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+(hani-hanimohsen3810@yahoo.com-0000)
+
+
+12-
+
+to create static directory
+project -> srttings.py
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/var/www/static/',
+]
+project -> urls.py
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('job/', include('job.urls'))
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
