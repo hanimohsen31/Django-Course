@@ -11,7 +11,7 @@ from .form import ApplyForm, JobForm
 def joblist(request):
     joblist1 = Job.objects.all()
 
-    paginator = Paginator(joblist1, 2)
+    paginator = Paginator(joblist1, 4)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     context = {'joblist1': page_obj, 'listlength': joblist1 }
@@ -42,7 +42,7 @@ def addjob(request):
             # myform.job = jobdetail
             # myform.save()
             # main url :: secondary url
-            return redirect(reverse('job:job'))
+            return redirect(reverse('job:joblist'))
         pass
     else:
         form = JobForm()
