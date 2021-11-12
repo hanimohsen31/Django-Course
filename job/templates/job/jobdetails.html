@@ -1,4 +1,6 @@
 {% load static %}
+{% load bootstrap4 %}
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -44,7 +46,7 @@
                             <div class="col-xl-3 col-lg-2">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="img/logo.png" alt="">
+                                        <img src="#" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -100,7 +102,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text">
-                        <h3>Software Engineer</h3>
+                        <h3>{{jobdetail.title}}</h3>
                     </div>
                 </div>
             </div>
@@ -115,17 +117,17 @@
                     <div class="job_details_header">
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="img/svg_icon/1.svg" alt="">
+                                <div class="thumb" style="display: flex;justify-content: center;align-items: center;">
+                                    <img src="{{jobdetail.image.url}}" alt="" width="82px" height="82px">
                                 </div>
                                 <div class="jobs_conetent">
-                                    <a href="#"><h4>Software Engineer</h4></a>
+                                    <a href="#"><h4>{{jobdetail.title}}</h4></a>
                                     <div class="links_locat d-flex align-items-center">
                                         <div class="location">
                                             <p> <i class="fa fa-map-marker"></i> California, USA</p>
                                         </div>
                                         <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                            <p> <i class="fa fa-clock-o"></i>{{jobdetail.job_type}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -140,77 +142,84 @@
                     <div class="descript_wrap white-bg">
                         <div class="single_wrap">
                             <h4>Job description</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
-                            <p>Variations of passages of lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
+                            <p>{{jobdetail.description}}</p>
                         </div>
-                        <div class="single_wrap">
-                            <h4>Responsibility</h4>
-                            <ul>
-                                <li>The applicants should have experience in the following areas.
-                                </li>
-                                <li>Have sound knowledge of commercial activities.</li>
-                                <li>Leadership, analytical, and problem-solving abilities.</li>
-                                <li>Should have vast knowledge in IAS/ IFRS, Company Act, Income Tax, VAT.</li>
-                            </ul>
-                        </div>
-                        <div class="single_wrap">
-                            <h4>Qualifications</h4>
-                            <ul>
-                                <li>The applicants should have experience in the following areas.
-                                </li>
-                                <li>Have sound knowledge of commercial activities.</li>
-                                <li>Leadership, analytical, and problem-solving abilities.</li>
-                                <li>Should have vast knowledge in IAS/ IFRS, Company Act, Income Tax, VAT.</li>
-                            </ul>
-                        </div>
-                        <div class="single_wrap">
-                            <h4>Benefits</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
-                        </div>
+<!--                        <div class="single_wrap">-->
+<!--                            <h4>Responsibility</h4>-->
+<!--                            <ul>-->
+<!--                                <li>The applicants should have experience in the following areas.-->
+<!--                                </li>-->
+<!--                                <li>Have sound knowledge of commercial activities.</li>-->
+<!--                                <li>Leadership, analytical, and problem-solving abilities.</li>-->
+<!--                                <li>Should have vast knowledge in IAS/ IFRS, Company Act, Income Tax, VAT.</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="single_wrap">-->
+<!--                            <h4>Qualifications</h4>-->
+<!--                            <ul>-->
+<!--                                <li>The applicants should have experience in the following areas.-->
+<!--                                </li>-->
+<!--                                <li>Have sound knowledge of commercial activities.</li>-->
+<!--                                <li>Leadership, analytical, and problem-solving abilities.</li>-->
+<!--                                <li>Should have vast knowledge in IAS/ IFRS, Company Act, Income Tax, VAT.</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="single_wrap">-->
+<!--                            <h4>Benefits</h4>-->
+<!--                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>-->
+<!--                        </div>-->
                     </div>
                     <div class="apply_job_form white-bg">
                         <h4>Apply for the job</h4>
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input_field">
-                                        <input type="text" placeholder="Your name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input_field">
-                                        <input type="text" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input_field">
-                                        <input type="text" placeholder="Website/Portfolio link">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <button type="button" id="inputGroupFileAddon03"><i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                                          </button>
-                                        </div>
-                                        <div class="custom-file">
-                                          <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
-                                          <label class="custom-file-label" for="inputGroupFile03">Upload CV</label>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input_field">
-                                        <textarea name="#" id="" cols="30" rows="10" placeholder="Coverletter"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="submit_btn">
-                                        <button class="boxed-btn3 w-100" type="submit">Apply Now</button>
-                                    </div>
-                                </div>
-                            </div>
+<!--                        start form                                      -->
+                        <form method="post" >
+                            {% csrf_token %}
+                            {% bootstrap_form form %}
+                            {% buttons %}
+                                <button class="boxed-btn3 w-100" type="submit">Apply Now</button>
+                            {% endbuttons %}
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-6">-->
+<!--                                    <div class="input_field">-->
+<!--                                        <input type="text" placeholder="Your name">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6">-->
+<!--                                    <div class="input_field">-->
+<!--                                        <input type="text" placeholder="Email">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="input_field">-->
+<!--                                        <input type="text" placeholder="Website/Portfolio link">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="input-group">-->
+<!--                                        <div class="input-group-prepend">-->
+<!--                                          <button type="button" id="inputGroupFileAddon03"><i class="fa fa-cloud-upload" aria-hidden="true"></i>-->
+<!--                                          </button>-->
+<!--                                        </div>-->
+<!--                                        <div class="custom-file">-->
+<!--                                          <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">-->
+<!--                                          <label class="custom-file-label" for="inputGroupFile03">Upload CV</label>-->
+<!--                                        </div>-->
+<!--                                      </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="input_field">-->
+<!--                                        <textarea name="#" id="" cols="30" rows="10" placeholder="Coverletter"></textarea>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="submit_btn">-->
+<!--                                        <button class="boxed-btn3 w-100" type="submit">Apply Now</button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </form>
+
+<!--                        end fooooooooooooooooooooooooooooooooooooorm                        -->
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -220,11 +229,11 @@
                         </div>
                         <div class="job_content">
                             <ul>
-                                <li>Published on: <span>12 Nov, 2019</span></li>
-                                <li>Vacancy: <span>2 Position</span></li>
-                                <li>Salary: <span>50k - 120k/y</span></li>
+                                <li>Published on: <span>{{jobdetail.published_at|date:'d M o'}}</span></li>
+                                <li>Vacancy: <span>{{jobdetail.vacancy}}</span></li>
+                                <li>Salary: <span>{{jobdetail.salary}}</span></li>
                                 <li>Location: <span>California, USA</span></li>
-                                <li>Job Nature: <span> Full-time</span></li>
+                                <li>Job Nature: <span>{{jobdetail.job_type}}</span></li>
                             </ul>
                         </div>
                     </div>
@@ -280,7 +289,7 @@
                         <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img src="img/logo.png" alt="">
+                                    <img src="#" alt="">
                                 </a>
                             </div>
                             <p>

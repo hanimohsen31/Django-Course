@@ -26,9 +26,20 @@ class Job(models.Model):
     salary = models.IntegerField(default=0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     experience = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='job/',default='')
+    image = models.ImageField(upload_to='job/', default='')
 
     def __str__(self):
         return self.title
 
 
+class Application(models.Model):
+    job = models.ForeignKey(Job, related_name='apply_job', on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=100)
+    # website = models.URLField(max_length=200, default=None)
+    # cv = models.FileField(upload_to='job/')
+    cover_letter = models.TextField(max_length=500)
+    created_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
